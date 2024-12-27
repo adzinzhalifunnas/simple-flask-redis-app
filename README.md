@@ -16,7 +16,7 @@ Before running the project, ensure you have the following installed on your syst
 
 ### **1. Clone the Repository**
 ```bash
-https://github.com/adzinzhalifunnas/simple-flask-redis-app.git
+git clone https://github.com/adzinzhalifunnas/simple-flask-redis-app.git
 cd simple-flask-redis-app
 ```
 
