@@ -1,9 +1,11 @@
 from flask import Flask
-import redis
+import redis, os
 
 app = Flask(__name__)
 
-redis_client = redis.StrictRedis(host='127.0.0.1', port=6379, decode_responses=True)
+redis_host = os.getenv('REDIS_HOST', '127.0.0.1')
+redis_port = int(os.getenv('REDIS_PORT', 6379))
+redis_client = redis.StrictRedis(host=redis_host, port=redis_port, decode_responses=True)
 
 def check_redis_connection():
     try:
